@@ -1,20 +1,33 @@
 MSSV: 24120261
 Họ và tên: Đặng Bùi Thế Bảo
 
-Tên mô hình: facebook/bart-large-mnli model
+## Tên mô hình: facebook/bart-large-mnli model
 
-Đường dẫn đến mô hình trên Hugging Face: https://huggingface.co/facebook/bart-large-mnli
+## Đường dẫn đến mô hình trên Hugging Face: https://huggingface.co/facebook/bart-large-mnli
 
-Chức năng của hệ thống:
+## Chức năng của hệ thống:
     - Đây là một mô hình sử dụng cho bài toán Zero-shot Classification (phân loại không cần huấn luyện)
-    - Mô hình được huấn luyện bằng cách làm xáo trộn văn bản và thêm chi tiết gây nhiễu rồi học cách khôi phục lại bản gốc dẫn đến kiến trúc này hiểu rất rõ ngữ nghĩa của câu
+    -Mô hình dựa trên bài toán Natural Language Inference (NLI), được fine-tune trên tập MNLI và có thể áp dụng cho zero-shot classification.
     - Áp dụng vào đồ án thực hiện chức năng phán đoán cảm xúc của người dùng thông qua việc phân tích ngữ nghĩa trong mô tả của người dùng, dùng vào việc đưa ra đề xuất các món ăn phù hợp vơi staam trạng của người dùng lúc đó
 
-Cài đặt các thư viện cần thiết: pip install -r requirements.txt
+## Cài đặt các thư viện cần thiết: pip install -r requirements.txt
 
-Hướng đãn chạy chương trình:
-    - Sử dụng Google Colab để mở file .ipynb
-    - thực hiện run từng đoạn code cell trong file
-    - Mở Terminal -> nhập lệnh: ssh -p 443 -R0:localhost:8000 qr@a.pinggy.io để mở server public
-    - Chạy cell Public API call để gọi API
-    - Sao chép đường dẫn sau khi chạy xong lệnh trên rồi mở bằng tab trình duyệt khác
+## Hướng đãn chạy chương trình:
+    Cách chạy:
+        1. Mở file .ipynb trên Google Colab
+        2. Run toàn bộ cell
+        3. Chạy lệnh mở public API(trong terminal  trên colab): ssh -p 443 -R0:localhost:8000 qr@a.pinggy.io
+        4. Lấy URL public → dùng để gọi API
+        Lưu ý: dán đường link public mới thay cho  link cũ mỗi khi mở server public một lần
+
+## Hướng dẫn gọi API
+    Cách gọi:
+        1. import thư viên request
+        2. Viết code gọi API:
+            import requests
+            API_URL = "Đường link public API/endpoint"
+            params = {"message": "I just broke up with my girl friend"}
+            response = requests.[phương thức](API_URL, params=params)
+            print(response.json())
+
+## Đường link video mô tả: 
