@@ -1,5 +1,5 @@
-MSSV: 24120261
-Họ và tên: Đặng Bùi Thế Bảo
+# MSSV: 24120261
+# Họ và tên: Đặng Bùi Thế Bảo
 
 ## Tên mô hình: facebook/bart-large-mnli model
 
@@ -30,4 +30,19 @@ Họ và tên: Đặng Bùi Thế Bảo
             response = requests.[phương thức](API_URL, params=params)
             print(response.json())
 
-## Đường link video mô tả: 
+## Đường link video mô tả: https://drive.google.com/drive/folders/1_KBbpkl-CSMgsVkFRWltcUm4QtODxtK9
+
+## Câu trúc repo
+facebookbart-large-mnli/                  
+├── src/                     # Mã nguồn chính (Source code)
+│   ├── BuildModel.py  
+│   ├── InitializeAPI.py     
+│   └── RunMoDel.py         
+├── test/                    # Thư mục chứa các script kiểm thử API
+│   ├── Test_Local_API.py    
+│   └── Test_Public_API.py   
+├── .gitignore              
+├── config.yaml              
+├── Demo_Model.ipynb         
+├── README.md                
+└── requirements.txt         
